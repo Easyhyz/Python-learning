@@ -1,7 +1,7 @@
 error = float(input()) # 误差是浮点数
 e = 1
 f = 1
-n = 1 # 阶乘项要单独判断
+n = 1 # 阶乘项单独相加
 
 while True:
     f *= n
