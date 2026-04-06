@@ -11,7 +11,7 @@ for i in range(m, n+1):
         if i%j == 0:
             is_su = 0
             break
-    if is_su: # 只有判断完素数后再相加
+    if is_su: # 只有判断完素数后再xjia
         total += i
         count += 1
 
