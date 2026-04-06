@@ -15,5 +15,5 @@ else:
         if score >= 60:
             count += 1
 
-    print(f"average = {aver/len(scores):.1f}")
+    print(f"average = {aver/len(scores):.1f}") # 格式化输出
     print(f"count = {count}")
