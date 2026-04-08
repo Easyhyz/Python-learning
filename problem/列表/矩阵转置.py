@@ -11,14 +11,28 @@ for row in range(m): # 自增
 print("原矩阵：")
 for row in range(m):
     for col in range(n):
-        print(matrix[row][col], end='  ')
+        print(matrix[row][col], end='   ')
     print()
 print()
+
 transpoted = []
 for i in range(n):
     transpoted.append([row[i] for row in matrix])
+# transpoted = [[row[i] for row in matrix] for i in range(n)]
+# 先竖再横
+"""
+1 2 3
+4 5 6
+7 8 9
+"""
+"""
+1 4 7
+2 5 8
+3 6 9
+"""
+
 print("转置矩阵：")
 for row in range(n):
     for col in range(m):
-        print(transpoted[row][col], end='  ')
+        print(transpoted[row][col], end='   ')
     print()
