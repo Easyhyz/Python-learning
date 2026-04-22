@@ -1,5 +1,8 @@
+# md5加密
+import hashlib
+
 # 初始用户及密码
-users = {"小甲鱼":"I_love_FishC", "不二如是":"FishC5201314"}
+users = {"小甲鱼":hashlib.md5(b"I_love_FishC"), "不二如是":hashlib.md5(b"FishC5201314")}
 # 用户名不许重复
 # 保存用户名及密码
 
@@ -12,9 +15,11 @@ while True:
         break
 
 passwd = input("请输入密码: ")
-users[name] = passwd # 注册的新用户添加到users中
+str_passwd = bytes(passwd, "utf-8") # 先转换到byte形式
+md5_passwd = hashlib.md5(str_passwd) # md5加密
+users[name] = md5_passwd # 注册的新用户添加到users中
 
 print("----------------")
 print("目前已注册的用户有：")
-for each in users:
-    print(each)
+for each in users.items():
+    print(each[0], each[1].hexdigest(), sep=': ') # 显示格式
