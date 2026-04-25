@@ -67,7 +67,7 @@ print("欢迎来到鱼C论坛~")
 
 ins = get_ins()
 
-while ins != '3':
+while ins != '3': # 调用不同的函数
     if ins == '1':
         register()
     if ins == '2':
